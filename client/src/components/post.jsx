@@ -12,7 +12,7 @@ export default function Post(props) {
   async function updatePost() {
     navigate('/edit', {replace: true, state: {id: props.post_id, path: props.path}});
   }
-
+ 
   async function deletePost() {
     if (props.post_id) { // if statement is needed or gets 500 error
       const storage = getStorage(app);
